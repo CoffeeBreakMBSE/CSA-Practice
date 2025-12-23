@@ -1,0 +1,64 @@
+id,module,question,A,B,C,D,answer,explanation
+M1-Q01,Module 1: Platform Overview,What best describes the ServiceNow platform?,A reporting tool only,A SaaS ITSM application,An application platform as a service (aPaaS),A local database,C,ServiceNow is an application platform as a service.
+M1-Q02,Module 1: Platform Overview,Which architecture does ServiceNow use by default?,Multi-tenant shared database,Single-tenant multi-instance,Single-tenant single-instance,On-premise only,B,Each customer has isolated instances.
+M1-Q03,Module 1: Platform Overview,Which instance is used by end users?,Development,Test,Production,Sub-production,C,Production is the live user-facing environment.
+M1-Q04,Module 1: Platform Overview,Where are ServiceNow instances hosted?,Customer laptops,ServiceNow data centers,Local servers only,AWS marketplace,B,Instances are hosted in ServiceNow data centers.
+
+M2-Q01,Module 2: User Administration,Which record defines what a user can do in ServiceNow?,Group,Role,Department,Location,B,Roles control permissions.
+M2-Q02,Module 2: User Administration,What happens when a role is assigned to a group?,Only the manager gets it,All members inherit it,Only new users get it,It is inactive,B,Group members inherit roles.
+M2-Q03,Module 2: User Administration,Which role allows impersonation?,admin,itil,impersonator,requester,C,The impersonator role enables impersonation.
+M2-Q04,Module 2: User Administration,Which role cannot be impersonated?,itil,admin,requester,security_admin,D,security_admin cannot be impersonated.
+M2-Q05,Module 2: User Administration,Where do you manage users and groups?,System Definition,User Administration,Organization,Security Operations,B,Users and groups are managed under User Administration.
+M2-Q06,Module 2: User Administration,What does impersonation help administrators do?,Modify ACLs,Test user experience,Create users,Change roles,B,Impersonation is for testing and troubleshooting.
+
+M3-Q01,Module 3: Configure Applications for Business,What does a list view control?,Returned records,Displayed fields and order,ACLs,Business logic,B,List views control columns.
+M3-Q02,Module 3: Configure Applications for Business,Which tool is recommended for modern form configuration?,Form Layout,Form Designer,Form Builder,Dictionary,C,Form Builder is the modern tool.
+M3-Q03,Module 3: Configure Applications for Business,What happens when you personalize a list?,All users see changes,Only admin sees changes,Only current user sees changes,View is deleted,C,Personalization affects only the user.
+M3-Q04,Module 3: Configure Applications for Business,Which role allows global list changes?,itil,personalize_list,admin,requester,C,Admin can change default views.
+M3-Q05,Module 3: Configure Applications for Business,Which is an example of configuration?,Writing Script Include,Creating UI Script,Adding field to form,Writing Business Rule,C,Configuration does not require code.
+M3-Q06,Module 3: Configure Applications for Business,Which is an example of customization?,Adding choice value,Creating list view,Modifying portal widget with code,Reordering fields,C,Customization involves scripting.
+
+M4-Q01,Module 4: Database & Tables,What uniquely identifies every record?,Number,Name,sys_id,Display value,C,sys_id is the unique identifier.
+M4-Q02,Module 4: Database & Tables,What is true about table extension?,Parent inherits child fields,Child inherits parent fields,Tables merge,Extension disables fields,B,Child tables inherit fields.
+M4-Q03,Module 4: Database & Tables,Where can field attributes be modified?,Tables,Schema Map,Data Dictionary,ACLs,C,Field definitions are in the dictionary.
+M4-Q04,Module 4: Database & Tables,Which table is a base table?,Incident,Task,Change Request,Problem,B,Task is a base table.
+M4-Q05,Module 4: Database & Tables,What does a reference field store?,Display value,Number,sys_id of another record,Text value,C,Reference fields store sys_id.
+
+M5-Q01,Module 5: Knowledge Management,What controls who can read a Knowledge article?,UI Policy,Client Script,Roles or User Criteria,Business Rule,C,Access is controlled by roles or user criteria.
+M5-Q02,Module 5: Knowledge Management,Which workflow publishes articles immediately?,Knowledge Approval,Knowledge Review,Knowledge Instant Publish,Knowledge Draft,C,Instant Publish bypasses review.
+M5-Q03,Module 5: Knowledge Management,Where are Knowledge Bases managed?,Self-Service,Knowledge > Administration,System Definition,Platform Analytics,B,Knowledge Bases are managed in Knowledge Administration.
+M5-Q04,Module 5: Knowledge Management,What happens if no role is set on an article?,No one can see it,Only admin can see it,Anyone with KB access can see it,It stays draft,C,Access defaults to KB permissions.
+
+M6-Q01,Module 6: Reports & Notifications,Which report best shows counts by category?,List,Calendar,Pie,Single Score,C,Pie charts show grouped counts.
+M6-Q02,Module 6: Reports & Notifications,How are reports scheduled?,System Scheduler,Email Notifications,Share/Schedule on report,Flow Designer,C,Reports are scheduled from the report.
+M6-Q03,Module 6: Reports & Notifications,When does an email notification send?,On form open,On list load,When conditions are met,On login,C,Notifications trigger on conditions.
+M6-Q04,Module 6: Reports & Notifications,What data source do most reports use?,API,Table,CSV upload,Dashboard,B,Reports usually use tables.
+
+M7-Q01,Module 7: Service Catalog,What record is created when ordering a catalog item?,Incident,Catalog Task,Requested Item (RITM),Change Request,C,RITM is created per request.
+M7-Q02,Module 7: Service Catalog,Which tool automates catalog fulfillment?,Workflow Editor,Business Rule,Flow Designer,UI Policy,C,Flow Designer is used for automation.
+M7-Q03,Module 7: Service Catalog,What is created to fulfill a request?,Incident,Change,Catalog Tasks,Problem,C,Catalog tasks fulfill RITMs.
+M7-Q04,Module 7: Service Catalog,Who typically submits catalog requests?,Administrators,Developers,End users,Auditors,C,End users submit requests.
+
+M8-Q01,Module 8: Update Sets,What is the correct update set order?,Commit Preview Retrieve,Retrieve Commit Preview,Retrieve Preview Commit,Preview Retrieve Commit,C,Retrieve then preview then commit.
+M8-Q02,Module 8: Update Sets,What should NOT be in update sets?,Forms,Business Rules,Users and Groups,Client Scripts,C,Users and groups are instance-specific.
+M8-Q03,Module 8: Update Sets,What is preview used for?,Apply changes,Check conflicts,Delete records,Activate plugins,B,Preview identifies issues.
+M8-Q04,Module 8: Update Sets,Where are retrieved update sets found?,Local Update Sets,Retrieved Update Sets,System Logs,Application Manager,B,Retrieved Update Sets store imported updates.
+
+DOC-M1-Q01,Module 1: Platform Overview,What architecture does ServiceNow use to ensure customer data isolation?,Multi-tenant shared database,Single-tenant multi-instance architecture,On-premise single database,Peer-to-peer architecture,B,ServiceNow uses a single-tenant multi-instance architecture to isolate customer data.
+DOC-M1-Q02,Module 1: Platform Overview,How many instances does a customer receive by default?,One production only,One development and one test,Production and non-production,Production and QA,C,Customers receive Production and non-production instances by default.
+DOC-M2-Q01,Module 2: User Administration,What does a role represent in ServiceNow?,A job title,A set of capabilities in the platform,A department hierarchy,A group assignment,B,A role defines what actions a user can perform in ServiceNow.
+DOC-M2-Q02,Module 2: User Administration,Which role can NOT be impersonated?,itil,requester,admin,security_admin,D,The security_admin role cannot be impersonated.
+DOC-M3-Q01,Module 3: Configure Applications for Business,What does a list view control?,Which records are returned,Which fields and order are displayed,Field-level security,Form layout,B,List views control the columns and their order, not the records.
+DOC-M3-Q02,Module 3: Configure Applications for Business,What is the purpose of the list collector?,Apply filters to a list,Add or remove fields from a list view,Create new list views,Manage ACLs,B,List collectors allow admins to add, remove, or reorder list columns.
+DOC-M3-Q03,Module 3: Configure Applications for Business,What does the green indicator in the list collector represent?,Mandatory fields,Reference fields,Related tables for dot-walking,Inactive fields,C,Green items indicate related tables available for dot-walking.
+DOC-M3-Q04,Module 3: Configure Applications for Business,Where can dot-walking NOT be used?,Form Layout,Reports,Form Designer,List Views,C,Dot-walking is not available in Form Designer.
+DOC-M4-Q01,Module 4: Database & Tables,What uniquely identifies a record in ServiceNow?,Number field,Display value,sys_id,Table name,C,Every record has a unique 32-character sys_id.
+DOC-M4-Q02,Module 4: Database & Tables,Where are table and field definitions stored?,Tables module,Schema Map,System Dictionary,ACL Rules,C,The System Dictionary stores table and field definitions.
+DOC-M4-Q03,Module 4: Database & Tables,What happens when a table extends another table?,Parent inherits child fields,Child inherits parent fields,Tables merge into one,Parent table is replaced,B,Child tables inherit all fields from the parent table.
+DOC-M4-Q04,Module 4: Database & Tables,What does a reference field store?,Display value,Record number,sys_id of another table,Free text,C,Reference fields store the sys_id of a record on another table.
+DOC-M5-Q01,Module 5: Knowledge Management,What controls who can read a knowledge article?,UI Policies,Business Rules,Roles or User Criteria,Client Scripts,C,Access to knowledge articles is controlled by roles or user criteria.
+DOC-M6-Q01,Module 6: Reports & Notifications,Which report type is best for grouped counts?,List,Calendar,Pie,Single Score,C,Pie charts are best for showing grouped counts.
+DOC-M6-Q02,Module 6: Reports & Notifications,When does an email notification send?,On form load,On user login,When record conditions are met,On report execution,C,Notifications trigger when defined conditions are met.
+DOC-M7-Q01,Module 7: Service Catalog,What record is created when a catalog item is ordered?,Incident,Change Request,Requested Item (RITM),Problem,C,A Requested Item (RITM) is created for each order.
+DOC-M8-Q01,Module 8: Update Sets,Which is the correct update set process?,Commit then preview,Preview then retrieve,Retrieve then preview then commit,Activate then commit,C,Update sets must be retrieved, previewed, and then committed.
+DOC-M8-Q02,Module 8: Update Sets,Which records should generally NOT be moved via update sets?,Business Rules,Forms,Users and Groups,Client Scripts,C,Users and groups are instance-specific and should not be moved.
