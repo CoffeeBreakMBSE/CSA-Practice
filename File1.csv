@@ -1,0 +1,421 @@
+id,module,question,A,B,C,D,E,F,answer,explanation
+M1-Q01,Module 1: Platform Overview,What best describes the ServiceNow platform?,A reporting tool only,A SaaS ITSM application,An application platform as a service (aPaaS),A local database,, ,C,ServiceNow is an application platform as a service.
+M1-Q02,Module 1: Platform Overview,Which architecture does ServiceNow use by default?,Multi-tenant shared database,Single-tenant multi-instance,Single-tenant single-instance,On-premise only,, ,B,Each customer has isolated instances.
+M1-Q03,Module 1: Platform Overview,Which instance is used by end users?,Development,Test,Production,Sub-production,, ,C,Production is the live user-facing environment.
+M1-Q04,Module 1: Platform Overview,Where are ServiceNow instances hosted?,Customer laptops,ServiceNow data centers,Local servers only,AWS marketplace,, ,B,Instances are hosted in ServiceNow data centers.
+
+M2-Q01,Module 2: User Administration,Which record defines what a user can do in ServiceNow?,Group,Role,Department,Location,, ,B,Roles control permissions.
+M2-Q02,Module 2: User Administration,What happens when a role is assigned to a group?,Only the manager gets it,All members inherit it,Only new users get it,It is inactive,, ,B,Group members inherit roles.
+M2-Q03,Module 2: User Administration,Which role allows impersonation?,admin,itil,impersonator,requester,, ,C,The impersonator role enables impersonation.
+M2-Q04,Module 2: User Administration,Which role cannot be impersonated?,itil,admin,requester,security_admin,, ,D,security_admin cannot be impersonated.
+M2-Q05,Module 2: User Administration,Where do you manage users and groups?,System Definition,User Administration,Organization,Security Operations,, ,B,Users and groups are managed under User Administration.
+M2-Q06,Module 2: User Administration,What does impersonation help administrators do?,Modify ACLs,Test user experience,Create users,Change roles,, ,B,Impersonation is for testing and troubleshooting.
+
+M3-Q01,Module 3: Configure Applications for Business,What does a list view control?,Returned records,Displayed fields and order,ACLs,Business logic,, ,B,List views control columns.
+M3-Q02,Module 3: Configure Applications for Business,Which tool is recommended for modern form configuration?,Form Layout,Form Designer,Form Builder,Dictionary,, ,C,Form Builder is the modern tool.
+M3-Q03,Module 3: Configure Applications for Business,What happens when you personalize a list?,All users see changes,Only admin sees changes,Only current user sees changes,View is deleted,, ,C,Personalization affects only the user.
+M3-Q04,Module 3: Configure Applications for Business,Which role allows global list changes?,itil,personalize_list,admin,requester,, ,C,Admin can change default views.
+M3-Q05,Module 3: Configure Applications for Business,Which is an example of configuration?,Writing Script Include,Creating UI Script,Adding field to form,Writing Business Rule,, ,C,Configuration does not require code.
+M3-Q06,Module 3: Configure Applications for Business,Which is an example of customization?,Adding choice value,Creating list view,Modifying portal widget with code,Reordering fields,, ,C,Customization involves scripting.
+
+M4-Q01,Module 4: Database & Tables,What uniquely identifies every record?,Number,Name,sys_id,Display value,, ,C,sys_id is the unique identifier.
+M4-Q02,Module 4: Database & Tables,What is true about table extension?,Parent inherits child fields,Child inherits parent fields,Tables merge,Extension disables fields,, ,B,Child tables inherit fields.
+M4-Q03,Module 4: Database & Tables,Where can field attributes be modified?,Tables,Schema Map,Data Dictionary,ACLs,, ,C,Field definitions are in the dictionary.
+M4-Q04,Module 4: Database & Tables,Which table is a base table?,Incident,Task,Change Request,Problem,, ,B,Task is a base table.
+M4-Q05,Module 4: Database & Tables,What does a reference field store?,Display value,Number,sys_id of another record,Text value,, ,C,Reference fields store sys_id.
+
+M5-Q01,Module 5: Knowledge Management,What controls who can read a Knowledge article?,UI Policy,Client Script,Roles or User Criteria,Business Rule,, ,C,Access is controlled by roles or user criteria.
+M5-Q02,Module 5: Knowledge Management,Which workflow publishes articles immediately?,Knowledge Approval,Knowledge Review,Knowledge Instant Publish,Knowledge Draft,, ,C,Instant Publish bypasses review.
+M5-Q03,Module 5: Knowledge Management,Where are Knowledge Bases managed?,Self-Service,Knowledge > Administration,System Definition,Platform Analytics,, ,B,Knowledge Bases are managed in Knowledge Administration.
+M5-Q04,Module 5: Knowledge Management,What happens if no role is set on an article?,No one can see it,Only admin can see it,Anyone with KB access can see it,It stays draft,, ,C,Access defaults to KB permissions.
+
+M6-Q01,Module 6: Reports & Notifications,Which report best shows counts by category?,List,Calendar,Pie,Single Score,, ,C,Pie charts show grouped counts.
+M6-Q02,Module 6: Reports & Notifications,How are reports scheduled?,System Scheduler,Email Notifications,Share/Schedule on report,Flow Designer,, ,C,Reports are scheduled from the report.
+M6-Q03,Module 6: Reports & Notifications,When does an email notification send?,On form open,On list load,When conditions are met,On login,, ,C,Notifications trigger on conditions.
+M6-Q04,Module 6: Reports & Notifications,What data source do most reports use?,API,Table,CSV upload,Dashboard,, ,B,Reports usually use tables.
+
+
+M7-Q01,Module 7: Service Catalog,What record is created when ordering a catalog item?,Incident,Catalog Task,Requested Item (RITM),Change Request,, ,C,RITM is created per request.
+M7-Q02,Module 7: Service Catalog,Which tool automates catalog fulfillment?,Workflow Editor,Business Rule,Flow Designer,UI Policy,, ,C,Flow Designer is used for automation.
+M7-Q03,Module 7: Service Catalog,What is created to fulfill a request?,Incident,Change,Catalog Tasks,Problem,, ,C,Catalog tasks fulfill RITMs.
+M7-Q04,Module 7: Service Catalog,Who typically submits catalog requests?,Administrators,Developers,End users,Auditors,, ,C,End users submit requests.
+M8-Q01,Module 8: Update Sets,What is the correct update set order?,Commit Preview Retrieve,Retrieve Commit Preview,Retrieve Preview Commit,Preview Retrieve Commit,, ,C,Retrieve then preview then commit.
+M8-Q02,Module 8: Update Sets,What should NOT be in update sets?,Forms,Business Rules,Users and Groups,Client Scripts,, ,C,Users and groups are instance-specific.
+M8-Q03,Module 8: Update Sets,What is preview used for?,Apply changes,Check conflicts,Delete records,Activate plugins,, ,B,Preview identifies issues.
+M8-Q04,Module 8: Update Sets,Where are retrieved update sets found?,Local Update Sets,Retrieved Update Sets,System Logs,Application Manager,, ,B,Retrieved Update Sets store imported updates.
+
+DOC-M1-Q01,Module 1: Platform Overview,What architecture does ServiceNow use to ensure customer data isolation?,Multi-tenant shared database,Single-tenant multi-instance architecture,On-premise single database,Peer-to-peer architecture,, ,B,ServiceNow uses a single-tenant multi-instance architecture to isolate customer data.
+DOC-M1-Q02,Module 1: Platform Overview,How many instances does a customer receive by default?,One production only,One development and one test,Production and non-production,Production and QA,, ,C,Customers receive Production and non-production instances by default.
+DOC-M2-Q01,Module 2: User Administration,What does a role represent in ServiceNow?,A job title,A set of capabilities in the platform,A department hierarchy,A group assignment,, ,B,A role defines what actions a user can perform in ServiceNow.
+DOC-M2-Q02,Module 2: User Administration,Which role can NOT be impersonated?,itil,requester,admin,security_admin,, ,D,The security_admin role cannot be impersonated.
+DOC-M3-Q01,Module 3: Configure Applications for Business,What does a list view control?,Which records are returned,Which fields and order are displayed,Field-level security,Form layout,, ,B,List views control the columns and their order, not the records.
+DOC-M3-Q02,Module 3: Configure Applications for Business,What is the purpose of the list collector?,Apply filters to a list,Add or remove fields from a list view,Create new list views,Manage ACLs,, ,B,List collectors allow admins to add, remove, or reorder list columns.
+DOC-M3-Q03,Module 3: Configure Applications for Business,What does the green indicator in the list collector represent?,Mandatory fields,Reference fields,Related tables for dot-walking,Inactive fields,, ,C,Green items indicate related tables available for dot-walking.
+DOC-M3-Q04,Module 3: Configure Applications for Business,Where can dot-walking NOT be used?,Form Layout,Reports,Form Designer,List Views,, ,C,Dot-walking is not available in Form Designer.
+DOC-M4-Q01,Module 4: Database & Tables,What uniquely identifies a record in ServiceNow?,Number field,Display value,sys_id,Table name,, ,C,Every record has a unique 32-character sys_id.
+DOC-M4-Q02,Module 4: Database & Tables,Where are table and field definitions stored?,Tables module,Schema Map,System Dictionary,ACL Rules,, ,C,The System Dictionary stores table and field definitions.
+DOC-M4-Q03,Module 4: Database & Tables,What happens when a table extends another table?,Parent inherits child fields,Child inherits parent fields,Tables merge into one,Parent table is replaced,, ,B,Child tables inherit all fields from the parent table.
+DOC-M4-Q04,Module 4: Database & Tables,What does a reference field store?,Display value,Record number,sys_id of another table,Free text,, ,C,Reference fields store the sys_id of a record on another table.
+DOC-M6-Q01,Module 6: Reports & Notifications,Which report type is best for grouped counts?,List,Calendar,Pie,Single Score,, ,C,Pie charts are best for showing grouped counts.
+DOC-M6-Q02,Module 6: Reports & Notifications,When does an email notification send?,On form load,On user login,When record conditions are met,On report execution,, ,C,Notifications trigger when defined conditions are met.
+DOC-M7-Q01,Module 7: Service Catalog,What record is created when a catalog item is ordered?,Incident,Change Request,Requested Item (RITM),Problem,, ,C,A Requested Item (RITM) is created for each order.
+DOC-M8-Q01,Module 8: Update Sets,Which is the correct update set process?,Commit then preview,Preview then retrieve,Retrieve then preview then commit,Activate then commit,, ,C,Update sets must be retrieved, previewed, and then committed.
+DOC-M8-Q02,Module 8: Update Sets,Which records should generally NOT be moved via update sets?,Business Rules,Forms,Users and Groups,Client Scripts,, ,C,Users and groups are instance-specific and should not be moved.
+
+"DOC-Q001,Module 3: Configure Applications for Business,Why should template creation be restricted to select groups?,Templates can bypass process controls like mandatory fields and UI policies; risky for condition-based flows,N/A,N/A,N/A,, ,A,""Templates can bypass normal form enforcement, so restrict who can create/share them."""
+"DOC-Q002,Module 3: Configure Applications for Business,Where is the form located in Workspace view?,Under the """"Details"""" tab,N/A,N/A,N/A,, ,A,""Workspace places the form under Details."""
+"DOC-Q003,Module 3: Configure Applications for Business,Where do form sections appear in Workspace view?,They appear in bold and can be expanded/collapsed,N/A,N/A,N/A,, ,A,""Sections are bold headers that expand/collapse."""
+"DOC-Q004,Module 3: Configure Applications for Business,Where does the activity stream appear in Workspace view?,In an additional panel in Workspace,N/A,N/A,N/A,, ,A,""Activity stream is shown in a separate panel."""
+"DOC-Q005,Module 3: Configure Applications for Business,Who can share templates to other users?,System Administrator,N/A,N/A,N/A,, ,A,""Template sharing is controlled by admin permissions."""
+"DOC-Q006,Module 2: User Administration,How can you disable Personalize Form for itil users?,Set sys property glide.ui.personalize_form.role value to admin,N/A,N/A,N/A,, ,A,""Changing this property restricts who can use personalize form."""
+"DOC-Q007,Module 3: Configure Applications for Business,How do you make the template bar visible on a form?,Use the form header More options (3 dots) and toggle Template bar,N/A,N/A,N/A,, ,A,""Template bar can be toggled from the form header menu."""
+"DOC-Q008,Module 3: Configure Applications for Business,How do you make a template available to others?,Select the magnifying glass on the group field choose group(s) then save the template,N/A,N/A,N/A,, ,A,""Assigning a template to groups makes it available to those users."""
+"DOC-Q009,Module 3: Configure Applications for Business,Which path is used to create a new application menu?,All > System Definition > Application Menus,N/A,N/A,N/A,, ,A,""Application menus are created in System Definition."""
+"DOC-Q010,Module 3: Configure Applications for Business,How do you create a new module within an application?,Scroll to Modules related list and select New,N/A,N/A,N/A,, ,A,""Modules are created from the Modules related list on the application menu."""
+"DOC-Q011,Module 3: Configure Applications for Business,How are choice lists identifiable and where are choices stored?,Identifiable by a dropdown; choices reside on the current table (e.g. Incident),N/A,N/A,N/A,, ,A,""Choice list values are stored as choices for that table/field."""
+"DOC-Q012,Module 3: Configure Applications for Business,How are reference lists identified and where is the data stored?,Identified by magnifying glass; data is stored in separate referenced tables,N/A,N/A,N/A,, ,A,""Reference fields point to another table’s records."""
+"DOC-Q013,Module 3: Configure Applications for Business,What is a choice list field?,A field that lets users select from a predefined set of choices,N/A,N/A,N/A,, ,A,""Choice fields restrict values to configured options."""
+"DOC-Q014,Module 3: Configure Applications for Business,Why use dependent choice fields?,They limit available values based on another field’s value,N/A,N/A,N/A,, ,A,""Example: Subcategory options depend on Category."""
+"DOC-Q015,Module 3: Configure Applications for Business,How can you add new elements to a choice list?,Right-click field label > Show Choice List > New > Submit,N/A,N/A,N/A,, ,A,""You can add choice values from the form context menu."""
+"DOC-Q016,Module 3: Configure Applications for Business,What is another method to add choice values quickly?,Right-click field > Configure Choices > enter new item > Add,N/A,N/A,N/A,, ,A,""Configure Choices supports fast entry of new values."""
+"DOC-Q017,Module 4: Database & Tables,What type of database is ServiceNow built on?,A relational database accessible through the ServiceNow platform,N/A,N/A,N/A,, ,A,""ServiceNow uses a relational model: tables rows records and columns fields."""
+"DOC-Q019,Module 4: Database & Tables,Where are table and field definitions stored?,System Dictionary (All > System Definition > Dictionary),N/A,N/A,N/A,, ,A,""Dictionary holds table/field metadata and attributes."""
+"DOC-Q020,Module 4: Database & Tables,Which modules can admins use to view/modify database structure?,Tables and Tables & Columns modules,N/A,N/A,N/A,, ,A,""Both modules support table creation/updates and column management."""
+"DOC-Q021,Module 3: Configure Applications for Business,How is data represented in a list?,Records are rows; fields are columns; values are intersections,N/A,N/A,N/A,, ,A,""This is the standard table/list representation."""
+"DOC-Q022,Module 3: Configure Applications for Business,What are list views?,Different field/column layouts for the same list (records unchanged),N/A,N/A,N/A,, ,A,""List views change visible columns, not which records are returned."""
+"DOC-Q023,Module 3: Configure Applications for Business,What is the list collector used for?,Add/remove/reorder fields (columns) in a list view,N/A,N/A,N/A,, ,A,""List collector controls which columns appear."""
+"DOC-Q024,Module 3: Configure Applications for Business,What does green indicate in the list collector?,Related tables available for dot-walking,N/A,N/A,N/A,, ,A,""Green items represent related/reference paths."""
+"DOC-Q025,Module 3: Configure Applications for Business,Where can dot-walking NOT be used?,Form Designer,N/A,N/A,N/A,, ,A,""Dot-walking is available in many places but not Form Designer."""
+"DOC-Q026,Module 3: Configure Applications for Business,Which roles can add/remove/reorder list columns?,sys_admin or personalize_list,N/A,N/A,N/A,, ,A,""These roles allow changing list layouts/columns."""
+"DOC-Q027,Module 3: Configure Applications for Business,Does list personalization affect the default view for everyone?,No it only affects the individual user,N/A,N/A,N/A,, ,A,""Personalization is user-specific; admins manage defaults."""
+"DOC-Q028,Module 1: Platform Overview,What should you verify before using a ServiceNow application?,Verify entitlement/licensing for the application,N/A,N/A,N/A,, ,A,""Use requires valid licenses/entitlements."""
+"DOC-Q029,Module 1: Platform Overview,What is special about plugin deactivation after activation?,Plugins generally cannot be deactivated once activated; only hidden,N/A,N/A,N/A,, ,A,""Activation is typically irreversible; plan before enabling."""
+"DOC-Q030,Module 1: Platform Overview,How are ServiceNow applications installed?,Via the ServiceNow Store,N/A,N/A,N/A,, ,A,""Apps are typically installed/managed through the Store/App Manager."""
+"DOC-Q031,Module 1: Platform Overview,What are plugins in ServiceNow?,Optional functionality (apps/workspaces/demo data) that can be installed/managed in Application Manager,N/A,N/A,N/A,, ,A,""Plugins add capabilities; some are published others by request."""
+"DOC-Q032,Module 1: Platform Overview,How do you request plugins that are available by request?,Submit a Request Plugin Activation via Now Support/ServiceNow support,N/A,N/A,N/A,, ,A,""Requested plugins require ServiceNow support activation."""
+"DOC-Q033,Module 1: Platform Overview,What is application scoping?,Restricts access to application files/data across apps to protect boundaries,N/A,N/A,N/A,, ,A,""Scopes control cross-application access and protections."""
+"DOC-Q034,Module 4: Database & Tables,What are database views used for?,Define table joins for reporting across multiple tables,N/A,N/A,N/A,, ,A,""Database views join tables for reporting without scripting."""
+"DOC-Q035,Module 4: Database & Tables,Where do you create database views?,System Definition > Database Views,N/A,N/A,N/A,, ,A,""Database views are configured under System Definition."""
+
+DOC-M1-Q01,Module 1: Platform Overview,What architecture does ServiceNow use to ensure customer data isolation?,Multi-tenant shared database,Single-tenant multi-instance architecture,On-premise single database,Peer-to-peer architecture,, ,B,ServiceNow uses a single-tenant multi-instance architecture to isolate customer data.
+DOC-M1-Q02,Module 1: Platform Overview,What cloud computing model best describes the Now Platform?,Infrastructure as a Service (IaaS),Platform as a Service (PaaS),Application Platform as a Service (aPaaS),Software as a Service (SaaS),, ,C,ServiceNow is delivered as an application platform as a service.
+
+DOC-M2-Q01,Module 2: User Administration,What record defines what a user can do in ServiceNow?,Group,Role,Department,Location,, ,B,Roles define permissions and access.
+DOC-M2-Q02,Module 2: User Administration,What happens when a role is assigned to a group?,Only the group manager receives the role,Only new users receive the role,All group members inherit the role,The role is inactive until approved,, ,C,Group members inherit assigned roles.
+DOC-M2-Q03,Module 2: User Administration,What is the primary purpose of impersonation?,Reset passwords,Test user access and visibility,Assign roles automatically,Modify ACLs,, ,B,Impersonation is used for testing and troubleshooting.
+
+DOC-M3-Q01,Module 3: Configure Applications for Business,What does a list view control?,Which records are returned,Which fields are displayed and their order,Field-level security,Table relationships,, ,B,List views control columns and their order.
+DOC-M3-Q02,Module 3: Configure Applications for Business,Which feature allows inline editing of records from a list?,Form Designer,Context Menu,List Editor,Data Policy,, ,C,List Editor allows editing without opening the form.
+DOC-M3-Q03,Module 3: Configure Applications for Business,What are filter conditions also known as?,Title bars,Breadcrumbs,Labels,Operators,, ,B,Filters appear as breadcrumbs in lists.
+
+DOC-M4-Q01,Module 4: Database & Tables,What uniquely identifies a record in ServiceNow?,Number,Name,sys_id,Display value,, ,C,sys_id is a unique 32-character identifier.
+DOC-M4-Q02,Module 4: Database & Tables,Which table is the base table for the CMDB?,cmdb,cmdb_ci,cmdb_rel_ci,asset,, ,B,cmdb_ci is the base table for configuration items.
+DOC-M4-Q03,Module 4: Database & Tables,What is an Import Set table?,Final destination table,Temporary staging table,Update Set table,Dictionary table,, ,B,Import Set tables store imported data temporarily.
+
+DOC-M5-Q01,Module 5: Knowledge Management,What controls who can read a knowledge article?,UI Policies,Client Scripts,Roles or User Criteria,Business Rules,, ,C,Access is controlled using roles or user criteria.
+DOC-M5-Q02,Module 5: Knowledge Management,Which state must a knowledge article be in to be visible to users?,Draft,Published,Retired,Review,, ,B,Only published articles are visible to users.
+DOC-M5-Q03,Module 5: Knowledge Management,What is the best way to share a knowledge article with another user?,Screenshot,Copy text,A permalink,Email attachment,, ,C,Permalinks ensure consistent access.
+
+DOC-M6-Q01,Module 6: Reports & Notifications,Which report type is best for showing counts by category?,List,Pie,Single Score,Calendar,, ,B,Pie charts show grouped count data.
+DOC-M6-Q02,Module 6: Reports & Notifications,By default who can view a newly created report?,All users,All roles,Report creator only,Administrators,, ,C,Reports are private to the creator by default.
+DOC-M6-Q03,Module 6: Reports & Notifications,What triggers an email notification?,User login,System events,Dot-walking,Activity stream,, ,B,Notifications are triggered by system events.
+
+DOC-M7-Q01,Module 7: Service Catalog,What record is created when a catalog item is ordered?,Incident,Change Request,Requested Item (RITM),Problem,, ,C,A Requested Item is created for each order.
+DOC-M7-Q02,Module 7: Service Catalog,What is the purpose of an Order Guide?,Submit incidents,Bundle related catalog items,Create workflows,Assign tasks automatically,, ,B,Order Guides allow multiple related items in one request.
+DOC-M7-Q03,Module 7: Service Catalog,Which feature creates task-based records from the Service Catalog?,Catalog Item,Record Producer,Order Guide,Flow Designer,, ,B,Record Producers create task-based records.
+
+DOC-M8-Q01,Module 8: Update Sets,What is the correct order for applying an Update Set?,Preview Commit Retrieve,Retrieve Preview Commit,Commit Preview Retrieve,Retrieve Commit Preview,, ,B,Update Sets must be retrieved then previewed then committed.
+DOC-M8-Q02,Module 8: Update Sets,Which record type should generally not be moved via Update Sets?,Business Rules,Client Scripts,Users and Groups,UI Policies,, ,C,Users and groups are instance-specific.
+DOC-M1-Q04,Module 1: Platform Overview,What is the primary purpose of an instance?,Data backup,Customer-specific environment,Shared reporting,Plugin storage,, ,B,Each customer receives its own isolated instance.
+DOC-M1-Q05,Module 1: Platform Overview,Which environment is typically used for development and testing?,Production,Sub-production,Disaster Recovery,Live instance,, ,B,Development and testing occur in sub-production instances.
+DOC-M1-Q06,Module 1: Platform Overview,What does HI stand for in ServiceNow?,Hosted Instance,Help Interactive,High Incident,Hybrid Interface,, ,B,HI refers to Help Interactive formerly the HI portal.
+DOC-M1-Q07,Module 1: Platform Overview,Which interface is designed mainly for end users?,Agent Workspace,Now Platform UI,Service Portal,Studio,, ,C,Service Portal is designed for end users.
+DOC-M1-Q08,Module 1: Platform Overview,Which ServiceNow feature shows recently accessed records?,Favorites,History,Bookmarks,Tags,, ,B,The History tab shows recently accessed records.
+DOC-M1-Q09,Module 1: Platform Overview,Which navigation element contains applications and modules?,Banner Frame,Application Navigator,Content Frame,User Menu,, ,B,Applications and modules are accessed from the Application Navigator.
+DOC-M1-Q10,Module 1: Platform Overview,What allows users to quickly return to the home page?,Star icon,Gear icon,Logo,Filter,, ,C,Clicking the logo returns users to Home.
+
+DOC-M2-Q05,Module 2: User Administration,What happens when a user is added to a group with roles?,Roles must be approved,Roles are inherited automatically,Roles are ignored,Roles apply only after logout,, ,B,Users inherit roles from groups automatically.
+DOC-M2-Q06,Module 2: User Administration,Which table stores user records?,sys_user,user,sys_users,user_account,, ,A,User records are stored in the sys_user table.
+DOC-M2-Q07,Module 2: User Administration,Which role allows access to most platform features?,security_admin,itil,admin,approver_user,, ,C,The admin role provides broad platform access.
+DOC-M2-Q08,Module 2: User Administration,What is the recommended way to assign roles?,Directly to users,Via business rules,Via groups,Via UI policies,, ,C,Best practice is assigning roles to groups.
+DOC-M2-Q09,Module 2: User Administration,Which role is required to create Access Control rules?,admin,itil,security_admin,acl_admin,, ,C,ACL creation requires the security_admin role.
+DOC-M2-Q10,Module 2: User Administration,Which feature shows who is currently online?,User Status,Profile Monitor,User Presence,Live Feed,, ,C,User Presence indicates online users.
+
+DOC-M3-Q04,Module 3: Configure Applications for Business,What does Form Designer primarily control?,Table relationships,Form layout and fields,ACLs,Data policies,, ,B,Form Designer controls layout and fields.
+DOC-M3-Q05,Module 3: Configure Applications for Business,Which tool controls mandatory read-only or hidden fields without scripting?,Client Script,UI Policy,Data Policy,ACL,, ,B,UI Policies control field behavior on forms.
+DOC-M3-Q06,Module 3: Configure Applications for Business,What is the purpose of templates?,Automate workflows,Populate commonly used fields,Assign records,Send notifications,, ,B,Templates populate commonly used values.
+DOC-M3-Q07,Module 3: Configure Applications for Business,Which feature allows users to save list filters?,Favorites,Breadcrumbs,Tags,Views,, ,A,Filters can be saved as favorites.
+DOC-M3-Q08,Module 3: Configure Applications for Business,What does dot-walking allow?,Script execution,Access related table fields,ACL enforcement,Workflow execution,, ,B,Dot-walking accesses related table fields.
+DOC-M3-Q09,Module 3: Configure Applications for Business,Which list menu provides export options?,Column context menu,List title menu,Record context menu,Field menu,, ,B,List title menu contains export options.
+DOC-M3-Q10,Module 3: Configure Applications for Business,Which role allows list personalization?,admin,itil,personalize_list,configure_list,, ,C,personalize_list allows user-specific list changes.
+
+DOC-M4-Q04,Module 4: Database & Tables,What type of database does ServiceNow use?,NoSQL,Object-oriented,Relational,Flat file,, ,C,ServiceNow uses a relational database.
+DOC-M4-Q05,Module 4: Database & Tables,What happens when a table extends another table?,Parent inherits child fields,Child inherits parent fields,Tables merge,Fields are duplicated,, ,B,Child tables inherit parent fields.
+DOC-M4-Q06,Module 4: Database & Tables,Which table contains dictionary definitions?,sys_dictionary,sys_db_object,sys_metadata,sys_table,, ,A,sys_dictionary stores field and table definitions.
+DOC-M4-Q07,Module 4: Database & Tables,Which field type stores a reference to another table?,String,Choice,Reference,Integer,, ,C,Reference fields store links to other tables.
+DOC-M4-Q08,Module 4: Database & Tables,What does a schema map display?,Forms and views,Table relationships,Workflows,ACLs,, ,B,Schema maps show table relationships.
+DOC-M4-Q09,Module 4: Database & Tables,Which operation writes import data to the target table?,Load Data,Run Transform,Create Map,Schedule Import,, ,B,Data is written during Run Transform.
+DOC-M4-Q10,Module 4: Database & Tables,Which key table is the base for task-related records?,incident,problem,task,request,, ,C,The task table is the base for task records.
+
+DOC-M5-Q04,Module 5: Knowledge Management,What determines who can read a knowledge article?,UI Policy,Roles or User Criteria,Workflow,Client Script,, ,B,Access is controlled by roles or user criteria.
+DOC-M5-Q05,Module 5: Knowledge Management,Which state makes a knowledge article visible?,Draft,Review,Published,Retired,, ,C,Only published articles are visible.
+DOC-M5-Q06,Module 5: Knowledge Management,What editor supports rich formatting and templates?,HTML Editor,Wiki Editor,Knowledge Editor,JavaScript Editor,, ,B,Wiki editor supports rich content.
+DOC-M5-Q07,Module 5: Knowledge Management,What feature lets users suggest article improvements?,Comments,Flagging,Editing,Approval,, ,B,Users can flag articles.
+DOC-M5-Q08,Module 5: Knowledge Management,What is the best way to share a knowledge article?,Screenshot,Email text,Permalink,Export PDF,, ,C,Permalinks provide consistent access.
+DOC-M5-Q09,Module 5: Knowledge Management,Which role manages multiple knowledge bases?,kb_admin,sn_kb_admin,knowledge_user,admin,, ,B,sn_kb_admin manages knowledge bases.
+DOC-M5-Q10,Module 5: Knowledge Management,Which feature tracks article usefulness?,View count,Star rating,Helpfulness score,Workflow,, ,C,Helpfulness score tracks usefulness.
+
+DOC-M6-Q04,Module 6: Reports & Notifications,Which report type shows a single metric value?,List,Pie,Single Score,Trend,, ,C,Single Score shows one KPI.
+DOC-M6-Q05,Module 6: Reports & Notifications,Which module is used to create reports?,Dashboards,Reports,Performance Analytics,Studio,, ,B,Reports are created in the Reports module.
+DOC-M6-Q06,Module 6: Reports & Notifications,What triggers notifications?,System events,UI policies,ACLs,Dot-walking,, ,A,Notifications are triggered by system events.
+DOC-M6-Q07,Module 6: Reports & Notifications,Which tab defines notification recipients?,What it will contain,Who will receive,When to send,Which template,, ,B,Recipients are defined in Who will receive.
+DOC-M6-Q08,Module 6: Reports & Notifications,Where are outbound emails logged?,System Logs > Emails,System Mailboxes > Outbox,Notifications,Email Properties,, ,B,Outbound emails appear in Outbox.
+DOC-M6-Q09,Module 6: Reports & Notifications,Which report sharing option emails results automatically?,Export,Publish,Schedule,Clone,, ,C,Scheduling emails report results.
+DOC-M7-Q04,Module 7: Service Catalog,What record groups multiple RITMs?,Catalog Item,Order Guide,REQ,SCTASK,, ,C,REQ groups multiple RITMs.
+DOC-M7-Q05,Module 7: Service Catalog,What fulfills catalog requests?,Flows,Business Rules,Client Scripts,ACLs,, ,A,Flows manage catalog fulfillment.
+DOC-M7-Q06,Module 7: Service Catalog,Which variable type allows selecting one option?,Checkbox,Reference,Multiple Choice,String,, ,C,Multiple Choice allows one selection.
+DOC-M7-Q07,Module 7: Service Catalog,What feature restricts catalog item visibility?,ACLs,User Criteria,UI Policies,Roles,, ,B,User Criteria controls visibility.
+DOC-M7-Q08,Module 7: Service Catalog,Which role manages catalog items without scripting?,catalog_admin,admin,catalog_editor,itil,, ,A,catalog_admin manages catalog configuration.
+DOC-M7-Q09,Module 7: Service Catalog,What creates task-based records from catalog?,Order Guide,Catalog Item,Record Producer,Variable Set,, ,C,Record Producers create task-based records.
+DOC-M7-Q10,Module 7: Service Catalog,What organizes items logically in the catalog?,Categories,Variables,Flows,Approvals,, ,A,Categories organize catalog items.
+
+DOC-M8-Q04,Module 8: Update Sets,What is the default state of a new Update Set?,Complete,In Progress,Preview,Committed,, ,B,Update Sets start In Progress.
+DOC-M8-Q05,Module 8: Update Sets,Which table stores Update Set records?,sys_update_xml,sys_update_set,sys_metadata,sys_db_object,, ,B,sys_update_set stores Update Sets.
+DOC-M8-Q06,Module 8: Update Sets,What should be done before committing an Update Set?,Preview,Close,Delete,Export,, ,A,Preview identifies conflicts.
+DOC-M8-Q07,Module 8: Update Sets,What is NOT captured in Update Sets by default?,Business Rules,Client Scripts,Data records,Forms,, ,C,Data records are not captured.
+DOC-M8-Q08,Module 8: Update Sets,Which format is used to export Update Sets?,CSV,JSON,XML,TXT,, ,C,Update Sets export as XML.
+DOC-M8-Q09,Module 8: Update Sets,What is best practice for Default Update Set?,Use for testing only,Merge before moving,Avoid using it,Export regularly,, ,C,Default Update Set should not be used for migrations.
+DOC-M8-Q10,Module 8: Update Sets,Where do retrieved Update Sets appear?,Local Update Sets,Retrieved Update Sets,Update Sources,System Logs,, ,B,Imported Update Sets appear in Retrieved Update Sets.
+
+PDF-M7-Q001,Module 7: Service Catalog,A Service Catalog may include which of the following components?,Order Guides Exchange Rates Calendars,Order Guides Catalog Items and Interceptors,Catalog Items Asset Contracts Task Surveys,Record Producers Order Guides and Catalog Items,, ,D,Service Catalog includes record producers order guides and catalog items.
+PDF-M4-Q002,Module 4: Database & Tables,Which statement applies to fields when they are coalesced during an import?,If a match is found the existing record is updated,If no match is found no transform map is created,If a match is found a new record is created,If no match is found the existing record is updated,, ,A,Coalesce fields update existing records when a match is found.
+PDF-M6-Q003,Module 6: Reports & Notifications,What best describes what a metric can do?,A report gauge on homepages,A time measurement for workflows and SLAs,Measure effectiveness of ITSM processes,A comparative flow measurement,, ,C,Metrics measure and evaluate IT service management effectiveness.
+PDF-M7-Q004,Module 7: Service Catalog,Which field controls display sequence in a catalog item?,Default Value,Sequence,Order field on Variable,Choice field,, ,C,Variable Order field controls display sequence.
+PDF-M6-Q005,Module 6: Reports & Notifications,Reports can be created from which places?,List column heading and View Run module,Metrics module only,Statistics module only,View Run only,, ,A,Reports can be created from list headers and View Run.
+PDF-M5-Q006,Module 5: Knowledge Management,Knowledge Base search results can be sorted by which options?,Popularity Relevancy Views,Relevancy Assignment Views,Most recent Popularity Views,Assignment only,, ,C,Search results can be sorted by most recent popularity and views.
+PDF-M7-Q007,Module 7: Service Catalog,What path shows fulfillment tasks for an order?,RITM to REQ to Procurement,REQ to RITM to Procurement,REQ to RITM to TASK,FULFILLMENT to TASK,, ,C,Fulfillment tasks follow REQ to RITM to TASK.
+PDF-M1-Q008,Module 1: Platform Overview,Which term refers to modules accessed frequently?,Breadcrumb,Favorite,Tag,Bookmark,, ,B,Favorites provide quick access.
+PDF-M7-Q009,Module 7: Service Catalog,What is generated when a user places a catalog order?,Change Request,Order Guide,Request,SLA,, ,C,A Request (REQ) is generated.
+PDF-M2-Q010,Module 2: User Administration,Which actions are available from the User menu?,Logout Elevate Impersonate,Send Notifications Approvals,Order Catalog only,Approve Records only,, ,A,User menu supports logout elevate roles and impersonation.
+PDF-M3-Q011,Module 3: Configure Applications for Business,Buttons links and context menu items are examples of?,Business Rules,UI Actions,Client Scripts,UI Policies,, ,B,UI Actions add buttons links and menu items.
+PDF-M7-Q012,Module 7: Service Catalog,Which statement about catalog items is true?,They run behind the scenes,They are building blocks,They are optional,They provide options,, ,B,Catalog items are the building blocks.
+PDF-M2-Q013,Module 2: User Administration,What is the platform name for the User table?,u_users,sys_users,x_users,sys_user,, ,D,User table name is sys_user.
+PDF-M7-Q014,Module 7: Service Catalog,What does a REQ number represent?,Order number,Stage,Task,Individual item,, ,A,REQ represents the order.
+PDF-M1-Q015,Module 1: Platform Overview,Which item does NOT appear in History?,Records,UI Pages,Lists,Forms,, ,B,UI Pages do not appear in history.
+PDF-M8-Q016,Module 8: Update Sets,Which Update Set practice is recommended?,Avoid Default Update Set,Use Baseline Update Set,Reuse completed update sets,Reopen completed sets,, ,A,Default Update Set should not be used.
+PDF-M7-Q017,Module 7: Service Catalog,What should admins know about catalog variables?,Only used in record producers,Only used in order guides,Cannot affect price,Global by default,, ,D,Variables are global by default.
+PDF-M6-Q018,Module 6: Reports & Notifications,What initiates a Flow?,Trigger,Action,Spoke,Event,, ,A,Flows are initiated by triggers.
+PDF-M3-Q019,Module 3: Configure Applications for Business,What does the column context menu display?,Filtering options,List-level actions,List configuration export quick reports,Record actions,, ,C,Column context menus allow quick reports and exports.
+PDF-M4-Q020,Module 4: Database & Tables,Which products populate CMDB?,Discovery IntegrationHub ETL,Finder CMDB Plugin,Discovery CMDB Plugin,CMDB Dashboard,, ,C,Discovery and CMDB Plugin populate CMDB.
+PDF-M1-Q001,Module 1: Platform Overview,Which term refers to application menus and modules you may want to access quickly and often?,Breadcrumb,Favorite,Tag,Bookmark,, ,B,Favorites provide quick access to frequently used applications and modules.
+PDF-M1-Q002,Module 1: Platform Overview,Which interface is the primary way to interact with applications and data in ServiceNow?,Service Portal,Now Mobile,Now Platform UI,Agent Workspace,, ,C,The Now Platform UI is the main interface for interacting with applications and data.
+PDF-M1-Q003,Module 1: Platform Overview,What is the quickest way to navigate back to a recently viewed record?,Expand all applications,Impersonate the user,Navigate to the list,Select the record from the History tab,, ,D,The History tab shows recently accessed records.
+PDF-M1-Q004,Module 1: Platform Overview,What icon marks an application or module as a favorite?,Gear,Triangle,Star,Circle,, ,C,The star icon is used to mark favorites.
+PDF-M1-Q005,Module 1: Platform Overview,Which element contains applications and modules in the UI?,Banner Frame,Application Navigator,Content Frame,User Menu,, ,B,The Application Navigator contains applications and modules.
+PDF-M1-Q006,Module 1: Platform Overview,What does the History menu display by default?,Last 10 entries,Last 30 entries,Last 50 entries,Last 100 entries,, ,C,The History menu shows the past 50 entries by default.
+PDF-M1-Q007,Module 1: Platform Overview,What is the name of the application navigator search box?,Type filter text,Navigation filter,Favorites filter,Modules filter,, ,A,The search box is labeled Type filter text.
+PDF-M1-Q008,Module 1: Platform Overview,What cloud computing model best describes the Now Platform?,Infrastructure as a Service,Platform as a Service,Application Platform as a Service,Software as a Service,, ,C,ServiceNow is an application platform as a service (aPaaS).
+PDF-M1-Q009,Module 1: Platform Overview,Which feature lets you see who is online in the instance?,Profile Monitor,User Status,User Presence,Live Feed,, ,C,User Presence indicates which users are online.
+PDF-M1-Q010,Module 1: Platform Overview,Which icon allows users to always return to the Home page?,Gear,Magnifying Glass,Logo,Star,, ,C,Clicking the ServiceNow logo returns users to Home.
+PDF-M1-Q011,Module 1: Platform Overview,Which item does NOT appear in the History tab?,Dashboards,Forms,UI Pages,Records,, ,C,UI Pages do not appear in the History tab.
+PDF-M1-Q012,Module 1: Platform Overview,Which navigation element displays global search?,Application Navigator,Banner Frame,Content Frame,List Pane,, ,B,Global search is located in the Banner Frame.
+PDF-M1-Q013,Module 1: Platform Overview,What are the three main elements of the ServiceNow user interface?,Banner Frame Application Navigator Content Frame,Application Frame Lists Forms,Navigator Content Banner,Header Sidebar Footer,, ,A,The UI consists of Banner Frame Application Navigator and Content Frame.
+PDF-M1-Q014,Module 1: Platform Overview,Which interface is designed primarily for end users?,Agent Workspace,Now Platform UI,Service Portal,Studio,, ,C,The Service Portal is designed for end users.
+PDF-M1-Q015,Module 1: Platform Overview,What does the funnel icon represent?,Search,Filter,Sort,Group,, ,B,The funnel icon is used to filter records.
+PDF-M2-Q001,Module 2: User Administration,Where are user records stored in ServiceNow?,user,sys_user,user_table,sys_users,, ,B,User records are stored in the sys_user table.
+PDF-M2-Q002,Module 2: User Administration,Where are group records stored in ServiceNow?,sn_user_group,sys_user_group,u_sys_group,s_sys_group,, ,B,Groups are stored in the sys_user_group table.
+PDF-M2-Q003,Module 2: User Administration,What is a role in ServiceNow?,A job title,A collection of permissions,A group of users,A workflow,, ,B,A role is a collection of permissions.
+PDF-M2-Q004,Module 2: User Administration,What is the recommended best practice for assigning roles?,Assign roles directly to users,Assign roles using client scripts,Add users to groups and assign roles to groups,Assign roles through workflows,, ,C,Best practice is assigning roles to groups.
+PDF-M2-Q005,Module 2: User Administration,What happens when a role is assigned to a group?,Only the group manager receives the role,Only new members receive the role,All group members inherit the role,The role must be approved manually,, ,C,All members of the group inherit the role.
+PDF-M2-Q006,Module 2: User Administration,Which role has access to almost all platform features?,itil,approver_user,admin,security_admin,, ,C,The admin role provides broad access.
+PDF-M2-Q007,Module 2: User Administration,Which role is required to create or modify Access Control rules?,admin,itil,security_admin,acl_admin,, ,C,ACL creation requires the security_admin role.
+PDF-M2-Q008,Module 2: User Administration,What is the primary purpose of user impersonation?,Reset passwords,Test access and visibility,Assign roles automatically,Modify ACLs,, ,B,Impersonation is used for testing and troubleshooting.
+PDF-M2-Q009,Module 2: User Administration,Where do you access the Impersonate User option?,Application Navigator,Content Frame,User Menu,System Properties,, ,C,Impersonation is accessed from the User Menu.
+PDF-M2-Q010,Module 2: User Administration,Which system property enables logging of impersonation events?,glide.user_setting,glide.sys.admin_login,glide.sys.log_impersonation,glide.impersonation_setting,, ,C,This property logs impersonation activity.
+PDF-M2-Q011,Module 2: User Administration,What should you do to return to your own account after impersonation?,Clear browser cache,Log out and back in,End Impersonation,Change roles,, ,C,End Impersonation returns you to your account.
+PDF-M2-Q013,Module 2: User Administration,What is a group defined as in ServiceNow?,A collection of permissions,A department,A collection of users,A workflow queue,, ,C,A group is a collection of users.
+PDF-M2-Q014,Module 2: User Administration,Which role allows a user to authorize requests without additional permissions?,reviewer_user,authorize_user,approver_user,approval_group,, ,C,approver_user allows approving requests only.
+PDF-M2-Q015,Module 2: User Administration,What menu option allows users to elevate roles temporarily?,User Preferences,System Settings,Elevate Roles,Role Assignment,, ,C,Elevate Roles allows temporary privilege elevation.
+PDF-M3-Q001,Module 3: Configure Applications for Business,What does a list view control?,Which records are returned,Which fields are displayed and their order,Field-level security,Table relationships,, ,B,List views control the columns shown and their order.
+PDF-M3-Q002,Module 3: Configure Applications for Business,Which feature allows users to edit field values directly from a list?,Form Designer,Data Editor,List Editor,UI Policy,, ,C,List Editor allows inline editing without opening the form.
+PDF-M3-Q003,Module 3: Configure Applications for Business,What are filter conditions also known as?,Column headings,Breadcrumbs,Title bars,Labels,, ,B,Filter conditions appear as breadcrumbs.
+PDF-M3-Q004,Module 3: Configure Applications for Business,Which icon is used to apply filters to a list?,Star,Magnifying glass,Funnel,Gear,, ,C,The funnel icon is used to filter lists.
+PDF-M3-Q005,Module 3: Configure Applications for Business,Which tool is used to populate commonly used fields on a form?,Reference Qualifier,Template,Formatter,Assignment Rule,, ,B,Templates populate predefined field values.
+PDF-M3-Q006,Module 3: Configure Applications for Business,Which feature allows saving a list filter for later use?,Views,Tags,Favorites,Breadcrumbs,, ,C,Filters can be saved as favorites.
+PDF-M3-Q007,Module 3: Configure Applications for Business,Which context menu provides export options for a list?,Record context menu,List title menu,Column context menu,Form context menu,, ,B,Export options are available from the list title menu.
+PDF-M3-Q008,Module 3: Configure Applications for Business,What does dot-walking allow an administrator to do?,Trigger workflows,Access related table fields,Modify ACLs,Run scripts,, ,B,Dot-walking accesses fields on related tables.
+PDF-M3-Q009,Module 3: Configure Applications for Business,Which list menu displays actions like quick reports and export?,Record context menu,Value context menu,List context menu,Column context menu,, ,C,List context menu provides list-level actions.
+PDF-M3-Q010,Module 3: Configure Applications for Business,Which role allows a user to personalize list layouts?,itil,configure_list,personalize_list,admin,, ,C,personalize_list allows user-specific list changes.
+PDF-M3-Q011,Module 3: Configure Applications for Business,What does the List Editor NOT allow you to do?,Edit a field inline,Update multiple records,Modify ACLs,Save changes,, ,C,ACLs cannot be modified via List Editor.
+PDF-M3-Q012,Module 3: Configure Applications for Business,Which menu appears when you right-click a column header?,Record context menu,List title menu,Column context menu,Field context menu,, ,C,Right-clicking a column header opens the column context menu.
+PDF-M3-Q013,Module 3: Configure Applications for Business,What allows filtering list data using normal words?,Predictive Intelligence,Artificial Intelligence Query,Natural Language Query,Context Finder,, ,C,Natural Language Query allows human-language filtering.
+PDF-M3-Q014,Module 3: Configure Applications for Business,What does the List Title menu allow you to do?,Edit field values,View record history,Export and refresh lists,Change table schema,, ,C,List Title menu allows exporting and refreshing lists.
+PDF-M3-Q015,Module 3: Configure Applications for Business,Which feature indicates that a list has been personalized?,Green dot near gear,Yellow dot near gear,Red star icon,Blue badge,, ,B,A yellow dot appears near the gear icon.
+PDF-M4-Q001,Module 4: Database & Tables,What uniquely identifies every record in ServiceNow?,Number,Name,sys_id,Display value,, ,C,Each record has a unique 32-character sys_id.
+PDF-M4-Q002,Module 4: Database & Tables,What type of database does ServiceNow use?,Flat file,Object-oriented,Relational,NoSQL,, ,C,ServiceNow is built on a relational database model.
+PDF-M4-Q003,Module 4: Database & Tables,What happens when a table extends another table?,Parent inherits child fields,Child inherits parent fields,Tables are merged,Fields are duplicated,, ,B,Extended tables inherit fields from the parent table.
+PDF-M4-Q004,Module 4: Database & Tables,Which table stores definitions of tables and fields?,sys_db_object,sys_dictionary,sys_metadata,sys_table,, ,B,The System Dictionary stores table and field definitions.
+PDF-M4-Q005,Module 4: Database & Tables,Which field type references records from another table?,String,Choice,Integer,Reference,, ,D,Reference fields point to records on another table.
+PDF-M4-Q006,Module 4: Database & Tables,Which base table is extended by Incident and Problem?,task,cmdb_ci,request,issue,, ,A,Task is the base table for many task-based records.
+PDF-M4-Q007,Module 4: Database & Tables,What does a schema map display?,Form layouts,Table relationships,Workflows,ACLs,, ,B,Schema maps visually display table relationships.
+PDF-M4-Q008,Module 4: Database & Tables,What is an Import Set table?,Final destination table,Temporary staging table,Update Set table,Dictionary table,, ,B,Import Set tables temporarily store imported data.
+PDF-M4-Q009,Module 4: Database & Tables,During which step is data written to the target table during an import?,Load Data,Create Transform Map,Run Transform,Schedule Transform,, ,C,Data is written when the transform is run.
+PDF-M4-Q010,Module 4: Database & Tables,Which field is used to match existing records during an import?,Reference field,Display value,Coalesce field,sys_created_on,, ,C,Coalesce fields identify existing records.
+PDF-M4-Q011,Module 4: Database & Tables,What is the correct order for filter conditions?,Operator Field Value,Field Operator Value,Value Field Operator,Condition Operator Value,, ,B,Filters are built using Field Operator Value.
+PDF-M4-Q012,Module 4: Database & Tables,Which table stores relationships between configuration items?,cmdb_ci,cmdb,cmdb_rel_ci,cmdb_svc_rel,, ,C,cmdb_rel_ci stores CI relationships.
+PDF-M4-Q013,Module 4: Database & Tables,What does dot-walking allow you to access?,Script Includes,Related table fields,ACL rules,UI policies,, ,B,Dot-walking accesses fields on referenced tables.
+PDF-M4-Q014,Module 4: Database & Tables,Which module allows viewing all columns for a table?,Schema Map,Tables & Columns,Dictionary Dashboard,Database Views,, ,B,Tables & Columns shows all fields for a table.
+PDF-M4-Q015,Module 4: Database & Tables,What is a Dictionary Override?,A script override,A UI override,Field property change on extended table,A workflow override,, ,C,Dictionary Overrides modify field attributes on extended tables.
+PDF-M5-Q001,Module 5: Knowledge Management,What state must a knowledge article be in to be visible to users?,Draft,Review,Published,Retired,, ,C,Only published knowledge articles are visible to users.
+PDF-M5-Q002,Module 5: Knowledge Management,What controls who can read a knowledge article?,UI Policies,Client Scripts,Roles or User Criteria,Business Rules,, ,C,Access to knowledge articles is controlled by roles or user criteria.
+PDF-M5-Q003,Module 5: Knowledge Management,Which tab on the knowledge base record defines who can read articles?,Can Author,Can Read,Can Contribute,Read Only,, ,B,The Can Read tab defines who can view articles.
+PDF-M5-Q004,Module 5: Knowledge Management,Which tab on the knowledge base record defines who can write articles?,Can Read,Can Author,Can Contribute,Read Only,, ,B,The Can Author tab controls who can create articles.
+PDF-M5-Q005,Module 5: Knowledge Management,Which role can manage multiple knowledge bases?,knowledge_user,kb_user,knowledge_admin,sn_kb_admin,, ,D,sn_kb_admin manages multiple knowledge bases.
+PDF-M5-Q006,Module 5: Knowledge Management,What is the best way to share a knowledge article with another user?,Email text,Screenshot,Copy and paste,A permalink,, ,D,Permalinks ensure consistent access.
+PDF-M5-Q007,Module 5: Knowledge Management,What feature allows users to indicate whether an article was helpful?,Comments,Flagging,Star rating,Helpfulness rating,, ,D,Helpfulness ratings track article usefulness.
+PDF-M5-Q008,Module 5: Knowledge Management,What feature allows users to suggest improvements to a knowledge article?,Edit article,Flag article,Submit change request,Open incident,, ,B,Flagging suggests revisions to knowledge managers.
+PDF-M5-Q009,Module 5: Knowledge Management,Which editor supports rich formatting when authoring articles?,HTML Editor,Wiki Editor,Java Editor,Plain Text Editor,, ,B,The Wiki editor supports rich formatting.
+PDF-M5-Q010,Module 5: Knowledge Management,Which workflow controls publishing and retirement of knowledge articles?,Approval Policies,Workflow Designer,Workflows,State Lifecycle,, ,C,Workflows control publishing and retiring articles.
+PDF-M5-Q011,Module 5: Knowledge Management,What setting allows users to view a knowledge article even if not logged in?,ESS role,Public setting,Allow All role,View All setting,, ,B,Public setting allows unauthenticated access.
+PDF-M5-Q012,Module 5: Knowledge Management,Where do users navigate to access available knowledge bases?,Knowledge > All,Self Service > Knowledge,Knowledge > Knowledge Bases,Knowledge > Overview,, ,B,End users access knowledge via Self Service > Knowledge.
+PDF-M5-Q013,Module 5: Knowledge Management,Which feature shows articles with the highest percentage of helpful ratings?,Featured,Most Helpful,Most Viewed,Most Useful,, ,B,Most Helpful shows top-rated articles.
+PDF-M5-Q014,Module 5: Knowledge Management,What are reusable pieces of content added to knowledge articles called?,Data Chunks,Knowledge Blocks,Content Snippets,Reusable Fields,, ,B,Knowledge Blocks are reusable content pieces.
+PDF-M5-Q015,Module 5: Knowledge Management,Which method is NOT used to populate knowledge articles?,Email integration,Manual creation,Import Word documents,Import Excel sheets,, ,D,Excel import is not used for knowledge articles.
+PDF-M6-Q001,Module 6: Reports & Notifications,What is a metric used for in ServiceNow reporting?,Displaying real-time dashboards,Measuring effectiveness of ITSM processes,Tracking user activity logs,Triggering notifications,, ,B,Metrics measure and evaluate the effectiveness of IT service management processes.
+PDF-M6-Q002,Module 6: Reports & Notifications,Where do you recommend an analyst start when creating reports?,Report Dashboard > Create New,Reports > Getting Started,Performance Analytics > Reports,Self-Service > Reports,, ,B,Reports > Getting Started provides guidance for building reports.
+PDF-M6-Q003,Module 6: Reports & Notifications,What is a key difference between Reporting and Performance Analytics?,Reporting stores snapshots over time,Performance Analytics stores snapshots over time,Reporting shows trends,Performance Analytics cannot trend,, ,B,Performance Analytics captures data snapshots over time.
+PDF-M6-Q004,Module 6: Reports & Notifications,Which module is used to create email notifications?,System Properties > Email > Settings,System Notification > Email > Notifications,User Preferences > Email,Administration > Notification Overview,, ,B,Email notifications are created under System Notification > Email > Notifications.
+PDF-M6-Q005,Module 6: Reports & Notifications,What triggers an email notification?,UI Policies,Record conditions and events,ACL changes,Client Scripts,, ,B,Notifications trigger based on record conditions and events.
+PDF-M6-Q006,Module 6: Reports & Notifications,Which tab defines when a notification is sent?,Who will receive,When to send,What it will contain,Which template,, ,B,When to send controls timing and conditions.
+PDF-M6-Q007,Module 6: Reports & Notifications,Which tab defines notification recipients?,When to send,What it will contain,Who will receive,Which template,, ,C,Recipients are configured under Who will receive.
+PDF-M6-Q008,Module 6: Reports & Notifications,Which tab defines the notification subject and message body?,Who will receive,When to send,What it will contain,Which template,, ,C,Message content is defined under What it will contain.
+PDF-M6-Q009,Module 6: Reports & Notifications,Where can administrators verify that a notification email was sent?,System Logs > Emails,System Mailboxes > Outbox,Notification History,System Logs > Events,, ,B,Outbound emails are logged in System Mailboxes > Outbox.
+PDF-M6-Q010,Module 6: Reports & Notifications,Which report type is best for showing counts grouped by category?,List,Pie,Single Score,Calendar,, ,B,Pie charts are ideal for grouped count data.
+PDF-M6-Q011,Module 6: Reports & Notifications,Which report type displays a single KPI value?,Bar,Pie,Single Score,Trend,, ,C,Single Score reports show a single metric value.
+PDF-M6-Q012,Module 6: Reports & Notifications,By default who can see a newly created report?,All users,Admins only,The report creator only,All roles,, ,C,Reports are private to the creator by default.
+PDF-M6-Q013,Module 6: Reports & Notifications,What option allows reports to be emailed automatically?,Export,Publish,Schedule,Clone,, ,C,Scheduling allows automatic email delivery.
+PDF-M6-Q014,Module 6: Reports & Notifications,Which section of Report Designer defines the data source?,Style,Type,Configure,Data,, ,D,The Data tab defines the table or data source.
+PDF-M6-Q015,Module 6: Reports & Notifications,What is a single email that summarizes activity called?,Email Summary,Email Digest,Newsletter,Survey,, ,B,Email Digest summarizes activity into one message.
+
+PDF-M7-Q001,Module 7: Service Catalog,What record is created when a user orders an item from the Service Catalog?,Incident,Change Request,Request (REQ),Problem,, ,C,A Request (REQ) is created when a catalog item is ordered.
+PDF-M7-Q002,Module 7: Service Catalog,What record represents an individual item within a Service Catalog order?,REQ,SCTASK,Requested Item (RITM),Approval,, ,C,Each catalog item ordered generates a Requested Item (RITM).
+PDF-M7-Q003,Module 7: Service Catalog,What record is generated to fulfill a requested item?,Incident,Approval,Catalog Task (SCTASK),Change,, ,C,Catalog Tasks are created to fulfill requested items.
+PDF-M7-Q004,Module 7: Service Catalog,What feature allows users to request multiple related items as a single request?,Catalog Item,Variable Set,Order Guide,Record Producer,, ,C,Order Guides bundle related catalog items into one request.
+PDF-M7-Q005,Module 7: Service Catalog,Which type of catalog item creates task-based records such as incidents?,Catalog Item,Order Guide,Record Producer,Content Item,, ,C,Record Producers create task-based records.
+PDF-M7-Q006,Module 7: Service Catalog,Which feature controls who can see a catalog item?,ACL Rules,User Criteria,UI Policies,Flows,, ,B,User Criteria control catalog item visibility.
+PDF-M7-Q007,Module 7: Service Catalog,Which variable type allows users to select a single option from a list?,Checkbox,Multiple Choice,Reference,String,, ,B,Multiple Choice allows selecting one option.
+PDF-M7-Q008,Module 7: Service Catalog,What is the purpose of Service Catalog variables?,Define workflows,Ask questions to users,Assign tasks,Create approvals,, ,B,Variables collect information from users.
+PDF-M7-Q009,Module 7: Service Catalog,Which role can manage Service Catalog items without scripting?,catalog_editor,catalog_manager,catalog_admin,admin,, ,C,catalog_admin manages catalog configuration without scripting.
+PDF-M7-Q010,Module 7: Service Catalog,What organizes catalog items into logical groups?,Variables,Order Guides,Categories,Flows,, ,C,Categories organize catalog items logically.
+PDF-M7-Q011,Module 7: Service Catalog,Which tool automates fulfillment of catalog requests?,Business Rules,Client Scripts,Flows,UI Policies,, ,C,Flows automate Service Catalog fulfillment.
+PDF-M7-Q012,Module 7: Service Catalog,What happens when multiple items are ordered together?,Only one RITM is created,Only one task is created,Multiple RITMs are created,Only approvals are created,, ,C,Each item ordered generates its own RITM.
+PDF-M7-Q013,Module 7: Service Catalog,What feature allows reuse of variables across multiple catalog items?,Order Guides,Variable Sets,Record Producers,Categories,, ,B,Variable Sets allow variable reuse.
+PDF-M7-Q014,Module 7: Service Catalog,Where do you navigate to create catalog items?,Self Service > Service Catalog,Service Catalog > Catalog Definitions > Maintain Items,System Definition > Tables,Service Portal,, ,B,Catalog items are created under Maintain Items.
+PDF-M7-Q015,Module 7: Service Catalog,Which fulfillment stage indicates work is actively being performed?,Pending,Approved,Fulfillment,Completed,, ,C,Fulfillment indicates active work on the request.
+
+PDF-M8-Q001,Module 8: Update Sets,What is an Update Set?,A security rule,A group of configuration changes,A workflow execution log,A reporting snapshot,, ,B,An Update Set groups configuration changes to move between instances.
+PDF-M8-Q002,Module 8: Update Sets,Which table stores Update Set records?,sys_update_xml,sys_update_set,sys_metadata,sys_db_object,, ,B,Update Sets are stored in the sys_update_set table.
+PDF-M8-Q003,Module 8: Update Sets,Which table stores the individual changes captured by an Update Set?,sys_update_set,sys_update_xml,sys_metadata,sys_dictionary,, ,B,Individual changes are stored in sys_update_xml.
+PDF-M8-Q004,Module 8: Update Sets,What is the default state of a newly created Update Set?,Complete,In Progress,Preview,Committed,, ,B,New Update Sets start in the In Progress state.
+PDF-M8-Q005,Module 8: Update Sets,What is the correct order for applying an Update Set?,Commit Preview Retrieve,Retrieve Preview Commit,Preview Retrieve Commit,Retrieve Commit Preview,, ,B,Update Sets must be retrieved then previewed then committed.
+PDF-M8-Q006,Module 8: Update Sets,Which record type is NOT captured in Update Sets by default?,Business Rules,Client Scripts,Data records,Forms,, ,C,Data records are not captured by default.
+PDF-M8-Q007,Module 8: Update Sets,What should be done before committing an Update Set?,Close it,Preview it,Export it,Delete it,, ,B,Preview identifies errors or conflicts before commit.
+PDF-M8-Q008,Module 8: Update Sets,Which Update Set should generally NOT be used for migrations?,Baseline Update Set,Default Update Set,Retrieved Update Set,Local Update Set,, ,B,Default Update Set should not be used for migrations.
+PDF-M8-Q009,Module 8: Update Sets,What format is used when exporting an Update Set?,CSV,JSON,XML,TXT,, ,C,Update Sets are exported in XML format.
+PDF-M8-Q010,Module 8: Update Sets,Where do retrieved Update Sets appear?,Local Update Sets,Retrieved Update Sets,System Logs,Update Sources,, ,B,Imported Update Sets appear under Retrieved Update Sets.
+PDF-M8-Q011,Module 8: Update Sets,What happens if the same object is modified in multiple Update Sets?,All versions are kept,The oldest change is applied,The most recent change wins,Changes are ignored,, ,C,The most recent update takes precedence.
+PDF-M8-Q012,Module 8: Update Sets,Which state must an Update Set be in before it can be retrieved?,In Progress,Preview,Complete,Committed,, ,C,An Update Set must be Complete before retrieval.
+PDF-M8-Q015,Module 8: Update Sets,Can Update Sets be merged?,No,Yes using Batch install,Yes by merging retrieved update sets,Only in production,, ,C,Retrieved Update Sets can be merged.
+PDF-VA-Q001,Module 3: Configure Applications for Business,What is the primary purpose of Virtual Agent?,Provide real-time dashboards,Automate user conversations and support tasks,Manage user roles,Track system performance,, ,B,Virtual Agent provides conversational assistance to users.
+PDF-VA-Q002,Module 3: Configure Applications for Business,Which interface does Virtual Agent primarily use?,Forms,List views,Messaging interface,Dashboards,, ,C,Virtual Agent operates through a conversational messaging interface.
+PDF-VA-Q003,Module 3: Configure Applications for Business,Which ServiceNow feature allows Virtual Agent to answer FAQs?,Flow Designer,Knowledge Base,Assignment Rules,UI Policies,, ,B,Virtual Agent uses Knowledge Base articles to answer FAQs.
+PDF-VA-Q004,Module 3: Configure Applications for Business,Which channel is supported by Virtual Agent?,Email only,Service Portal only,Web and messaging channels,Reports,, ,C,Virtual Agent supports web and messaging channels.
+PDF-VA-Q005,Module 3: Configure Applications for Business,Which capability allows Virtual Agent to resolve incidents automatically?,Issue Auto Resolution,Incident Intercept Resolution,Problem Auto Fix,Ticket Resolver,, ,B,Incident Intercept Resolution helps resolve incidents automatically.
+PDF-TM-Q001,Module 6: Reports & Notifications,What is a task in ServiceNow?,A workflow,A report,A record that can be assigned and completed,A dashboard,, ,C,A task is any record that can be assigned and worked.
+PDF-TM-Q002,Module 6: Reports & Notifications,Which table stores SLA records attached to tasks?,sla,task_sla,sla_definition,task_time,, ,B,task_sla stores SLA records.
+PDF-TM-Q003,Module 6: Reports & Notifications,What does SLA stand for?,System Level Agreement,Service Level Agreement,Service Lifecycle Automation,Support Level Assignment,, ,B,SLA stands for Service Level Agreement.
+PDF-TM-Q004,Module 6: Reports & Notifications,Which feature ensures tasks are completed within defined timeframes?,Assignment Rules,Visual Task Boards,Service Level Agreements,Inactivity Monitor,, ,C,SLAs track and enforce task completion time.
+PDF-TM-Q005,Module 6: Reports & Notifications,Which module shows tasks assigned to your group but not yet assigned to you?,My Work,My Groups Work,My Tasks,My Assignments,, ,B,My Groups Work shows group tasks awaiting assignment.
+PDF-SCR-Q001,Module 3: Configure Applications for Business,Which scripting language is used in ServiceNow?,Python,Java,JavaScript,C#,, ,C,ServiceNow scripting uses JavaScript.
+PDF-SCR-Q002,Module 3: Configure Applications for Business,Which script runs on the server side?,Client Script,UI Policy,Business Rule,UI Action,, ,C,Business Rules run on the server.
+PDF-SCR-Q003,Module 3: Configure Applications for Business,Which client script runs when a field value changes?,onLoad,onSubmit,onChange,onCellEdit,, ,C,onChange runs when a field value changes.
+PDF-SCR-Q004,Module 3: Configure Applications for Business,Which client script runs when a list cell value is edited?,onSubmit,onCellEdit,onChange,onLoad,, ,B,onCellEdit runs for list editor changes.
+PDF-SCR-Q005,Module 3: Configure Applications for Business,Which scripting best practice is recommended by ServiceNow?,Always script instead of configure,Prefer configuration over scripting,Use scripts for every change,Avoid client scripts,, ,B,Configuration is preferred over scripting where possible.
+PDF-REP-Q001,Module 6: Reports & Notifications,What is a key feature of Performance Analytics?,Real-time dashboards only,Historical trend analysis,Email notifications,List editing,, ,B,Performance Analytics tracks trends over time.
+PDF-REP-Q002,Module 6: Reports & Notifications,Which Report Designer tab is used to define grouping and calculations?,Type,Style,Configure,Data,, ,C,Grouping and calculations are defined in Configure.
+PDF-REP-Q003,Module 6: Reports & Notifications,Which report type shows trends over time?,Pie,Bar,Line,Single Score,, ,C,Line charts display trends over time.
+PDF-REP-Q004,Module 6: Reports & Notifications,By default who can view a newly created report?,All users,Admins only,Report creator only,All roles,, ,C,Reports are private to the creator by default.
+PDF-REP-Q005,Module 6: Reports & Notifications,What does an anti-signal indicate in Performance Analytics?,System failure,Normal performance,Process instability,Data corruption,, ,B,Anti-signals indicate stable performance.
+PDF-INT-Q001,Module 3: Configure Applications for Business,What ServiceNow feature extends Flow Designer to call third-party systems?,Business Rules,IntegrationHub,Script Includes,REST Messages,, ,B,IntegrationHub enables third-party integrations.
+PDF-INT-Q002,Module 3: Configure Applications for Business,Which authentication method is commonly used for integrations?,FTP,LDAP,SSO,Email,, ,B,LDAP is commonly used for integrations.
+PDF-INT-Q003,Module 3: Configure Applications for Business,What component is required for on-premise integrations?,MID Server,Proxy Server,VPN Gateway,Load Balancer,, ,A,MID Server enables secure on-premise integrations.
+PDF-INT-Q004,Module 3: Configure Applications for Business,Which IntegrationHub component groups related actions?,Flow,Connection,Spoke,Trigger,, ,C,Spokes group related integration actions.
+PDF-INT-Q005,Module 3: Configure Applications for Business,Which integration approach allows data exchange via REST APIs?,SOAP UI,Email actions,REST Messages,Inbound Forms,, ,C,REST Messages enable REST-based integrations.
+PDF-VA-Q006,Module 3: Configure Applications for Business,What is a Virtual Agent?,A reporting dashboard,A conversational bot for user assistance,A workflow engine,A mobile-only feature,, ,B,Virtual Agent is a conversational bot that assists users.
+PDF-VA-Q007,Module 3: Configure Applications for Business,Which feature allows Virtual Agent to query or update records?,UI Policies,Flows,ACLs,Data Policies,, ,B,Virtual Agent can use flows to query or update records.
+PDF-VA-Q008,Module 3: Configure Applications for Business,Which capability allows Virtual Agent to gather information such as attachments?,Script Includes,Data pills,User criteria,Knowledge blocks,, ,B,Data pills allow Virtual Agent to collect and pass information.
+PDF-VA-Q009,Module 3: Configure Applications for Business,Which messaging channels are supported by Virtual Agent?,Email only,Service Portal only,Web and mobile messaging channels,Reports only,, ,C,Virtual Agent supports web and mobile messaging channels.
+PDF-VA-Q010,Module 3: Configure Applications for Business,Which feature generates previews when links are shared in Virtual Agent conversations?,Link preview,Link unfurling,Link sharing,URL mapping,, ,B,Link unfurling generates content previews.
+PDF-VA-Q011,Module 3: Configure Applications for Business,Which system property disables link unfurling in Virtual Agent?,cs.disable_link_preview,com.glide.cs.enable_link_unfurling,com.glide.cs.disable_link_unfurling,glide.cs.link_unfurling,, ,C,Disabling this property turns off link unfurling.
+PDF-TM-Q006,Module 6: Reports & Notifications,What is a task in ServiceNow?,A form,A workflow,A record that can be assigned and worked,A report,, ,C,A task represents work to be completed.
+PDF-TM-Q007,Module 6: Reports & Notifications,Which feature prevents tasks from being ignored over time?,Assignment Rules,Visual Task Boards,Inactivity Monitor,UI Policies,, ,C,Inactivity Monitor alerts users when tasks are untouched.
+PDF-TM-Q008,Module 6: Reports & Notifications,Which tool provides a visual drag-and-drop interface for managing tasks?,Connect Chat,Visual Task Board,Task List,Service Portal,, ,B,Visual Task Boards provide drag-and-drop task management.
+PDF-TM-Q009,Module 6: Reports & Notifications,Which module shows work assigned to your group but not to an individual?,My Work,My Tasks,My Groups Work,Team Dashboard,, ,C,My Groups Work shows unassigned group tasks.
+PDF-TM-Q010,Module 6: Reports & Notifications,What record type represents work that must be completed?,Incident,Request,Task,Problem,, ,C,Tasks represent work items.
+PDF-SLA-Q001,Module 6: Reports & Notifications,What does SLA stand for?,Service Lifecycle Automation,Service Level Agreement,System Level Assignment,Support Level Action,, ,B,SLA stands for Service Level Agreement.
+PDF-SLA-Q002,Module 6: Reports & Notifications,Which table stores Task SLA records?,sla,task_sla,sla_definition,task_time,, ,B,task_sla stores SLA records tied to tasks.
+PDF-SLA-Q003,Module 6: Reports & Notifications,Which module is used to define SLAs and OLAs?,Incident Management,Service Level Management,Service Catalog,Task Management,, ,B,SLAs and OLAs are defined in Service Level Management.
+PDF-SLA-Q004,Module 6: Reports & Notifications,What sequence defines an SLA lifecycle?,Start Pause Stop,Start Hold Halt,Start In Progress Stop,Begin End Close,, ,C,SLAs follow Start to In Progress to Stop.
+PDF-SLA-Q005,Module 6: Reports & Notifications,What type field differentiates SLA OLA and UC?,Duration,Type,Condition,Schedule,, ,B,The Type field distinguishes SLA OLA and UC.
+PDF-SCR-Q006,Module 3: Configure Applications for Business,Which type of script runs when a record is inserted updated deleted or queried?,Client Script,UI Policy,Business Rule,UI Action,, ,C,Business Rules execute on server-side database operations.
+PDF-SCR-Q007,Module 3: Configure Applications for Business,Which scripting object runs in the user’s browser?,Business Rule,Script Include,Client Script,Access Control Script,, ,C,Client Scripts run in the browser.
+PDF-SCR-Q008,Module 3: Configure Applications for Business,Which client script runs when a form is submitted?,onLoad,onChange,onSubmit,onCellEdit,, ,C,onSubmit runs when the user submits the form.
+PDF-SCR-Q009,Module 3: Configure Applications for Business,Which client script type executes when a form loads?,onChange,onLoad,onSubmit,onCellEdit,, ,B,onLoad executes when a form loads.
+PDF-SCR-Q010,Module 3: Configure Applications for Business,Which best practice is recommended for scripting in ServiceNow?,Always use scripts over configuration,Prefer configuration before scripting,Use scripting for UI only,Avoid server scripts,, ,B,Configuration is preferred over scripting when possible.
+PDF-SCR-Q011,Module 3: Configure Applications for Business,Which object is used to control field behavior when a UI Policy runs?,UI Action,Client Script,UI Policy Action,Data Policy,, ,C,UI Policy Actions define field behavior.
+PDF-SCR-Q012,Module 3: Configure Applications for Business,Which variable is used to pass data from server to client scripts?,gs.scratchpad,g_form,g_user,g_scratchpad,, ,D,g_scratchpad passes data from server to client.
+PDF-PA-Q006,Module 6: Reports & Notifications,What is the main purpose of Performance Analytics?,Create dashboards only,Track historical trends over time,Send notifications,Manage reports,, ,B,Performance Analytics tracks trends using historical data.
+PDF-PA-Q007,Module 6: Reports & Notifications,What does an anti-signal indicate in Performance Analytics?,System outage,Stable process behavior,Data corruption,Process failure,, ,B,Anti-signals indicate stability.
+PDF-PA-Q008,Module 6: Reports & Notifications,Which Report Designer tab allows selecting visualization type?,Configure,Style,Type,Data,, ,C,Visualization type is selected under Type.
+PDF-PA-Q009,Module 6: Reports & Notifications,Which Report Designer tab allows choosing colors and layout?,Type,Style,Configure,Data,, ,B,Style controls colors and layout.
+PDF-PA-Q010,Module 6: Reports & Notifications,What is the default visibility of a report?,All users,Admins only,Creator only,All roles,, ,C,Reports are private by default.
+PDF-INT-Q006,Module 3: Configure Applications for Business,What is IntegrationHub used for?,Data imports only,Extending Flow Designer with integrations,Managing ACLs,Reporting,, ,B,IntegrationHub enables integrations within flows.
+PDF-INT-Q007,Module 3: Configure Applications for Business,Which IntegrationHub component groups related integration actions?,Trigger,Connection,Spoke,Flow,, ,C,Spokes group related actions.
+PDF-INT-Q008,Module 3: Configure Applications for Business,Which server enables secure communication with on-premise systems?,Proxy Server,MID Server,VPN Gateway,Load Balancer,, ,B,MID Server enables on-premise integrations.
+PDF-INT-Q009,Module 3: Configure Applications for Business,Which authentication method is commonly used with LDAP integrations?,OAuth,Basic Auth,LDAP,Token-based,, ,C,LDAP is commonly used for directory integrations.
+PDF-INT-Q010,Module 3: Configure Applications for Business,Which integration method allows REST-based communication?,SOAP UI,Inbound Email,REST Messages,Client Scripts,, ,C,REST Messages are used for REST integrations.
+PDF-SEC-Q001,Module 2: User Administration,What does an Access Control rule define?,UI behavior,Database structure,Object and operation permissions,Workflow execution,, ,C,ACLs define object access permissions.
+PDF-SEC-Q002,Module 2: User Administration,In what order are Access Controls evaluated?,Field then Table,Table then Field,Row then Field,Role order,, ,B,Table-level rules are evaluated before field-level rules.
+PDF-SEC-Q003,Module 2: User Administration,Which role is required to modify Access Control rules?,admin,itil,security_admin,acl_admin,, ,C,security_admin is required for ACL changes.
+PDF-SEC-Q004,Module 2: User Administration,Which element specifies the table and field in an ACL?,Condition,Operation,Object name,Role,, ,C,Object name defines table and field.
+PDF-SEC-Q005,Module 2: User Administration,What must be true if both table and field ACLs exist?,Only table ACL applies,Only field ACL applies,Both must allow access,Most recent applies,, ,C,Both ACLs must evaluate to true.
+
+PDF-CMDB-Q001,Module 4: Database & Tables,What is the base table for configuration items?,cmdb,cmdb_ci,cmdb_rel_ci,asset,, ,B,cmdb_ci is the base table for CIs.
+PDF-CMDB-Q002,Module 4: Database & Tables,Which framework standardizes service definitions across ServiceNow?,ITSM,ITIL,CSDM,CMDB,, ,C,CSDM standardizes service data models.
+PDF-CMDB-Q003,Module 4: Database & Tables,Which table stores CI relationships?,cmdb_ci,cmdb,cmdb_rel_ci,cmdb_svc_rel,, ,C,cmdb_rel_ci stores CI relationships.
+PDF-CMDB-Q004,Module 4: Database & Tables,Which feature visually displays CI relationships?,Schema Map,Dependency View,Database View,Form Layout,, ,B,Dependency View shows CI relationships graphically.
+PDF-CMDB-Q005,Module 4: Database & Tables,What is a Configuration Item?,A catalog item,A deployable asset,A component managed to deliver services,A workflow,, ,C,A CI supports service delivery.
+
+PDF-FLOW-Q001,Module 3: Configure Applications for Business,What component initiates a Flow execution in Flow Designer?,Action,Trigger,Spoke,Condition,, ,B,Flows are initiated by triggers.
+PDF-FLOW-Q002,Module 3: Configure Applications for Business,Which component allows conditional logic within a Flow?,Trigger,Condition,Data Pill,Spoke,, ,B,Conditions control logic paths in flows.
+PDF-FLOW-Q003,Module 3: Configure Applications for Business,Where is data from an action stored for reuse later in a flow?,Script Include,Data Pill,Flow Context,Variable,, ,B,Data Pills store outputs from actions.
+PDF-FLOW-Q004,Module 3: Configure Applications for Business,Which Flow Designer element pauses execution until criteria are met?,Delay action,Wait for Condition,Approval action,Trigger,, ,B,Wait for Condition pauses the flow.
+PDF-FLOW-Q005,Module 3: Configure Applications for Business,Which Flow component defines when a flow should run?,Condition only,Trigger and Condition,Action and Condition,Trigger only,, ,B,Trigger and Condition define execution timing.
+
+PDF-SLA-Q006,Module 6: Reports & Notifications,Which SLA feature pauses timing when conditions are met?,Retroactive start,Pause condition,Stop condition,Reset rule,, ,B,Pause conditions suspend SLA timing.
+PDF-SLA-Q007,Module 6: Reports & Notifications,What happens when an SLA breaches?,Task closes automatically,Notification may be sent,SLA resets,SLA is deleted,, ,B,Breach can trigger notifications.
+PDF-SLA-Q008,Module 6: Reports & Notifications,Which table defines SLA definitions?,task_sla,sla_definition,sla,contract,, ,B,sla_definition stores SLA rules.
+PDF-SLA-Q009,Module 6: Reports & Notifications,What differentiates OLA from SLA?,Duration,Type field,Target table,Schedule,, ,B,The Type field distinguishes SLA OLA and UC.
+PDF-SLA-Q010,Module 6: Reports & Notifications,Which SLA type measures internal support commitments?,SLA,OLA,UC,Contract,, ,B,OLA measures internal service targets.
+
+PDF-SC-Q016,Module 7: Service Catalog,Which feature restricts catalog item visibility without scripting?,UI Policy,User Criteria,Client Script,ACL,, ,B,User Criteria control visibility.
+PDF-SC-Q017,Module 7: Service Catalog,What happens if a catalog item is restricted using User Criteria?,Item is hidden from unauthorized users,Item is deleted,Item shows as read-only,Item requires approval,, ,A,Unauthorized users cannot see the item.
+PDF-SC-Q018,Module 7: Service Catalog,Which catalog element defines reusable question sets?,Catalog Item,Order Guide,Variable Set,Flow,, ,C,Variable Sets reuse variables.
+PDF-SC-Q019,Module 7: Service Catalog,Which record groups multiple requested items together?,RITM,REQ,SCTASK,Approval,, ,B,REQ groups multiple RITMs.
+PDF-SC-Q020,Module 7: Service Catalog,Which fulfillment record represents work performed?,REQ,RITM,SCTASK,Incident,, ,C,SCTASK represents fulfillment work.
+
+PDF-UP-Q016,Module 8: Update Sets,What happens when update sets conflict?,All changes are applied,Most recent change wins,Oldest change wins,Changes are skipped,, ,B,Most recent change takes precedence.
+PDF-UP-Q017,Module 8: Update Sets,What must be done before an Update Set can be retrieved?,Preview it,Mark Complete,Export it,Commit it,, ,B,Update Sets must be Complete before retrieval.
+PDF-UP-Q018,Module 8: Update Sets,Which record type is never captured in Update Sets by default?,Forms,Client Scripts,Data records,Views,, ,C,Data records are not captured by default.
+PDF-UP-Q019,Module 8: Update Sets,Where can administrators view update set errors?,System Logs,Update Set Preview,Retrieved Update Sets,Local Update Sets,, ,B,Preview shows errors and conflicts.
+PDF-UP-Q020,Module 8: Update Sets,What is best practice for large update sets?,Use one large update set,Split into smaller update sets,Always use Default Update Set,Merge after commit,, ,B,Smaller update sets reduce risk.
